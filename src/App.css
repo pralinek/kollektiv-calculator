@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
@@ -27,4 +27,5 @@
   justify-content: center;
   align-items: center;
   color: white;
+  
 }
