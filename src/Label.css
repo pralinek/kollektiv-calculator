@@ -1,0 +1,26 @@
+.price{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+
+}
+
+.price .text{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.number{
+    width: 2.75em;
+    height: 2.75em;
+    background-color: white;
+    
+    border-radius: 50%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsl(229, 64%, 46%);
+}

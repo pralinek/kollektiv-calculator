@@ -1,0 +1,17 @@
+.slide{
+    width: 100%;
+
+}
+.price{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5em;
+
+}
+
+.price .text{
+    font-size: 1.5rem;
+    margin: 0;
+}
