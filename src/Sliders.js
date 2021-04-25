@@ -79,6 +79,8 @@ export default function Sliders() {
     
   };
 
+  const euroPrice = Number.parseFloat(value*value2/100).toFixed(1);
+
   const handleRes = (event, newValue) => {
     newValue = Number.parseFloat(newValue).toFixed(1)
     setValue3(newValue);
@@ -166,7 +168,7 @@ export default function Sliders() {
       />
          <Label
       text="Percent fee"
-      value={value2}
+      value={euroPrice}
       sign="%"
       color="hsl(261, 73%, 60%)"
 
