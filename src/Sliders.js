@@ -169,7 +169,7 @@ export default function Sliders() {
          <Label
       text="Percent fee"
       value={euroPrice}
-      sign="%"
+      sign="€"
       color="hsl(261, 73%, 60%)"
 
       />
