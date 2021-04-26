@@ -48,7 +48,7 @@ export default function Sliders() {
   const [value4, setValue4] = useState(0);
   const [maxPer, setMax] = useState(100);
   const [feeRange, setFee] = useState(0);
-
+  const [euroPrice, setEuro] = useState(0);
   const handlePrice = (event, newValue) => {
     setValue(newValue);
     if (newValue>0){
@@ -58,12 +58,14 @@ export default function Sliders() {
     setValue3(0);
     setValue4(0);
     setFee(0);
+    setEuro(9)
     }
     else{
         setMax(0);
         setValue2(0);
         setValue3(9);
         setValue4(0);
+        
     }
 
   };
@@ -75,23 +77,23 @@ export default function Sliders() {
     
     setValue3(0);
     setValue4(feeRange);
-    
+    setEuro(Number.parseFloat(value*newValue/100).toPrecision(2))
     
   };
-
-  const euroPrice = Number.parseFloat(value*value2/100).toFixed(1);
+  
+ 
 
   const handleRes = (event, newValue) => {
-    newValue = Number.parseFloat(newValue).toFixed(1)
+    newValue = Number.parseFloat(newValue).toPrecision(2)
     setValue3(newValue);
-    setValue4(Number.parseFloat(feeRange-newValue).toFixed(1));
+    setValue4(Number.parseFloat(feeRange-newValue).toPrecision(2));
 
   };
 
   const handleCus = (event, newValue) => {
-    newValue = Number.parseFloat(newValue).toFixed(1)
+    newValue = Number.parseFloat(newValue).toPrecision(2)
     setValue4(newValue);
-    setValue3(Number.parseFloat(feeRange-newValue).toFixed(1));
+    setValue3(Number.parseFloat(feeRange-newValue).toPrecision(2));
   };
 
   const PriceSlider = PrettoSlider;
@@ -102,7 +104,7 @@ export default function Sliders() {
   const marks = [
     {
       value: 9,
-      label: "0€",
+      label: "9€",
     },
 
     {
